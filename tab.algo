@@ -1,0 +1,27 @@
+ALGORITHM findDistinctsum
+VAR
+     set1, set2: ARRAY_OF INTEGER[20];
+    i,j,sum :INTEGER;
+ equal:BOOLEAN:=false;
+BEGIN
+ set1:={3,1,7,9};
+ FOR i FROM 0 TO set2.length-1 STEP 1  DO
+    read(set2[i]);
+    
+ END_FOR
+ j:=0;
+ sum:=0;
+ FOR i FROM 0 TO set1.length-1 STEP 1  DO
+ WHILE (j<set2.length) DO
+   IF (set1[i]<>set2[j]) THEN
+ j:=j+1;
+
+ ELSE
+  equal:=true;  
+ END_IF
+ END_WHILE
+ IF (equal=false) THEN
+    sum:=sum+set1[i]
+ END_IF
+ END_FOR
+END
